@@ -462,7 +462,7 @@ function Index() {
 
       {/* Contact */}
       <section id="contact" className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 md:pb-36">
-        <div className="reveal relative overflow-hidden rounded-[2.5rem] border border-border bg-foreground p-8 text-background md:p-16">
+        <div className="reveal relative overflow-hidden rounded-[2rem] border border-border bg-foreground p-6 text-background sm:rounded-[2.5rem] sm:p-10 md:p-16">
           <div
             className="absolute -right-20 -top-20 h-96 w-96 rounded-full gradient-warm opacity-60 blur-3xl"
             style={{ animation: "orb 16s ease-in-out infinite" }}
