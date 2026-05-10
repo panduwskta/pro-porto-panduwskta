@@ -151,8 +151,8 @@ function Index() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Header */}
-      <header className="sticky top-0 z-50">
-        <div className="mx-auto mt-4 flex max-w-7xl items-center justify-between rounded-full glass px-5 py-3 md:px-7">
+      <header className="sticky top-0 z-50 px-3 sm:px-4">
+        <div className="mx-auto mt-4 flex max-w-7xl items-center justify-between gap-3 rounded-full glass px-4 py-3 md:px-7">
           <a href="#top" className="flex items-center gap-2 font-black tracking-tight">
             <span className="grid h-8 w-8 place-items-center rounded-full gradient-warm text-cream">
               P
