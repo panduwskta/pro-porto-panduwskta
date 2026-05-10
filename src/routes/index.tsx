@@ -190,7 +190,7 @@ function Index() {
               Available for projects · 2026
             </div>
             <h1
-              className="text-display mt-6 text-[clamp(2.6rem,8vw,6.5rem)]"
+              className="text-display mt-6 break-words text-[clamp(2rem,9vw,6.5rem)]"
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.1s" }}
             >
               Performance <br />
