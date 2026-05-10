@@ -53,7 +53,7 @@ const IMPACT = [
   {
     metric: "53%",
     title: "More efficient CPA",
-    body: "CPA tembus 53% di bawah target SOP perusahaan di PT Anggun Vital Indonesia (SVO) lewat audience segmentation dan creative-level optimization.",
+    body: "CPA tembus 53% di bawah target SOP perusahaan lewat audience segmentation dan creative-level optimization.",
     icon: TrendingUp,
   },
   {
@@ -93,25 +93,25 @@ const EXPERIENCE = [
     role: "Meta Ads Specialist / Performance Marketer",
     org: "PT Anggun Vital Indonesia (SVO)",
     period: "Aug 2025 — Dec 2025",
-    body: "Handle full-funnel Meta Ads untuk produk beauty & health D2C dengan budget bulanan IDR 180jt.",
+    body: "Handle Meta Ads campaign end-to-end untuk produk D2C beauty & health. Budget hingga IDR 180M/bulan dengan full-funnel structure (TOFU/MOFU/BOFU). Implementasi AI-driven creative production — voice cloning & AI B-roll untuk mempercepat output iklan.",
   },
   {
     role: "Digital Marketing Consultant",
-    org: "Freelance",
+    org: "Independent",
     period: "Sep 2024 — Present",
-    body: "Konsultasi strategis untuk lead generation dan campaign D2C berbasis data dan creative testing.",
+    body: "Memberikan strategic consulting untuk 2 klien aktif: fine dining restaurant (lead gen) dan wellness/health D2C brand. Berperan sebagai performance advisor — mendiagnosis masalah campaign dan memberikan recovery action plan.",
   },
   {
     role: "Head of Digital & Creative",
-    org: "Jejak Pribadi Organizer",
+    org: "PT Karya Cipta Salira (JPO)",
     period: "Dec 2023 — Present",
-    body: "Memimpin strategi digital & kreatif, mengelola tim writer, designer, dan content producer.",
+    body: "Memimpin strategi digital dan kreatif untuk corporate event organizer. Mengelola tim writers, designers, dan content producers. Menulis dan mengawasi copywriting dalam bahasa Indonesia dan Inggris untuk berbagai campaign.",
   },
   {
     role: "Freelance Photographer & Videographer",
     org: "Independent",
     period: "2021 — 2026",
-    body: "Dokumentasi event, video promosi, company profile, dan visual campaign untuk berbagai brand.",
+    body: "Mendokumentasikan 20+ corporate events besar — RAKERNAS KEMNAKER RI, BPJSTK Jakarta, UIN SH Jakarta, PT Kino Indonesia, PT Linfox IDN, dan banyak lagi. Background visual informs creative briefs dan hook strategy untuk Meta campaigns.",
   },
 ];
 
@@ -190,7 +190,7 @@ function Index() {
               Available for projects · 2026
             </div>
             <h1
-              className="text-display mt-6 text-[clamp(2.2rem,9vw,6.5rem)] leading-[0.88] tracking-[-0.05em] md:max-w-[900px]"
+              className="text-display mt-6 text-[clamp(2.2rem,8vw,6.5rem)] leading-[0.88] tracking-[-0.05em] max-w-full lg:max-w-[720px] xl:max-w-[780px] 2xl:max-w-[860px]"
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.1s" }}
             >
               <span className="block md:whitespace-nowrap">
@@ -484,6 +484,9 @@ function Index() {
               <h2 className="text-display mt-5 text-3xl sm:text-4xl md:text-7xl">
                 Need campaigns with <span className="gradient-text italic">taste</span> and traction?
               </h2>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-background/70 md:text-lg">
+                Tertarik kolaborasi, hiring, atau diskusi soal performance marketing dan creative strategy?
+              </p>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-background/70 md:text-lg">
                 Kalau brand kamu butuh performance marketer yang bisa baca data sekaligus
                 kolaborasi mulus sama tim kreatif — yuk ngobrol. Saya senang bantu brand
