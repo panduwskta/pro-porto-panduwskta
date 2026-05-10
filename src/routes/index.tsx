@@ -151,8 +151,8 @@ function Index() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Header */}
-      <header className="sticky top-0 z-50">
-        <div className="mx-auto mt-4 flex max-w-7xl items-center justify-between rounded-full glass px-5 py-3 md:px-7">
+      <header className="sticky top-0 z-50 px-3 sm:px-4">
+        <div className="mx-auto mt-4 flex max-w-7xl items-center justify-between gap-3 rounded-full glass px-4 py-3 md:px-7">
           <a href="#top" className="flex items-center gap-2 font-black tracking-tight">
             <span className="grid h-8 w-8 place-items-center rounded-full gradient-warm text-cream">
               P
@@ -179,7 +179,7 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="relative mx-auto max-w-7xl px-6 pt-16 pb-24 md:pt-24 md:pb-36">
+      <section id="top" className="relative mx-auto max-w-7xl px-4 pt-12 pb-20 sm:px-6 md:pt-24 md:pb-36">
         <div className="grid gap-12 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">
             <div
@@ -190,7 +190,7 @@ function Index() {
               Available for projects · 2026
             </div>
             <h1
-              className="text-display mt-6 text-[clamp(2.6rem,8vw,6.5rem)]"
+              className="text-display mt-6 break-words text-[clamp(2rem,9vw,6.5rem)]"
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.1s" }}
             >
               Performance <br />
@@ -226,26 +226,26 @@ function Index() {
             </div>
 
             <div
-              className="mt-12 flex flex-wrap gap-8 border-t border-border pt-8"
+              className="mt-12 grid grid-cols-3 items-center gap-3 border-t border-border pt-8 sm:flex sm:flex-wrap sm:gap-8"
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.55s" }}
             >
               <div>
-                <div className="text-display text-4xl gradient-text">2+</div>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                <div className="text-display text-2xl gradient-text sm:text-4xl">2+</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground sm:text-xs">
                   Years experience
                 </div>
               </div>
-              <div className="h-12 w-px bg-border" />
+              <div className="hidden h-12 w-px bg-border sm:block" />
               <div>
-                <div className="text-display text-4xl gradient-text">180Jt</div>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                  IDR / month Ads budget
+                <div className="text-display text-2xl gradient-text sm:text-4xl">180Jt</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground sm:text-xs">
+                  IDR / mo Ads
                 </div>
               </div>
-              <div className="h-12 w-px bg-border" />
+              <div className="hidden h-12 w-px bg-border sm:block" />
               <div>
-                <div className="text-display text-4xl gradient-text">D2C</div>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                <div className="text-display text-2xl gradient-text sm:text-4xl">D2C</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground sm:text-xs">
                   Growth focus
                 </div>
               </div>
@@ -259,19 +259,19 @@ function Index() {
                 className="absolute inset-0 rounded-[2.5rem] gradient-warm blur-2xl opacity-70"
                 style={{ animation: "orb 14s ease-in-out infinite" }}
               />
-              <div className="relative h-full w-full overflow-hidden rounded-[2.5rem] glass p-8">
+              <div className="relative h-full w-full overflow-hidden rounded-[2.5rem] glass p-6 sm:p-8">
                 <div className="flex h-full flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                  <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground sm:text-xs">
                     <span>// Monogram</span>
                     <span>2026</span>
                   </div>
                   <div className="relative grid place-items-center">
                     <div
-                      className="absolute h-56 w-56 rounded-full gradient-warm opacity-90 blur-xl"
+                      className="absolute h-40 w-40 rounded-full gradient-warm opacity-90 blur-xl sm:h-56 sm:w-56"
                       style={{ animation: "orb 12s ease-in-out infinite reverse" }}
                     />
                     <span
-                      className="relative text-[14rem] font-black leading-none gradient-text"
+                      className="relative font-black leading-none gradient-text text-[clamp(7rem,28vw,14rem)]"
                       style={{ letterSpacing: "-0.08em" }}
                     >
                       P
@@ -312,7 +312,7 @@ function Index() {
       </div>
 
       {/* Work / Impact */}
-      <section id="work" className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <section id="work" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-14 max-w-2xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
             01 — Selected Impact
@@ -359,7 +359,7 @@ function Index() {
       </section>
 
       {/* Capabilities */}
-      <section id="capabilities" className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <section id="capabilities" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-14 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
@@ -401,7 +401,7 @@ function Index() {
       </section>
 
       {/* Experience */}
-      <section id="experience" className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <section id="experience" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-14 max-w-2xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
             03 — Experience
@@ -439,7 +439,7 @@ function Index() {
       </section>
 
       {/* Skills */}
-      <section className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <section className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-12 max-w-2xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
             04 — Skills & Tools
@@ -461,8 +461,8 @@ function Index() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="relative mx-auto max-w-7xl px-6 pb-24 md:pb-36">
-        <div className="reveal relative overflow-hidden rounded-[2.5rem] border border-border bg-foreground p-8 text-background md:p-16">
+      <section id="contact" className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 md:pb-36">
+        <div className="reveal relative overflow-hidden rounded-[2rem] border border-border bg-foreground p-6 text-background sm:rounded-[2.5rem] sm:p-10 md:p-16">
           <div
             className="absolute -right-20 -top-20 h-96 w-96 rounded-full gradient-warm opacity-60 blur-3xl"
             style={{ animation: "orb 16s ease-in-out infinite" }}
@@ -473,7 +473,7 @@ function Index() {
               <div className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
                 05 — Contact
               </div>
-              <h2 className="text-display mt-5 text-4xl md:text-7xl">
+              <h2 className="text-display mt-5 text-3xl sm:text-4xl md:text-7xl">
                 Need campaigns with <span className="gradient-text italic">taste</span> and traction?
               </h2>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-background/70 md:text-lg">
@@ -533,20 +533,20 @@ function ContactRow({
   return (
     <a
       href={href}
-      className="group flex items-center justify-between rounded-2xl border border-background/15 bg-background/5 p-5 backdrop-blur transition-all hover:border-accent/60 hover:bg-background/10"
+      className="group flex items-center justify-between gap-3 rounded-2xl border border-background/15 bg-background/5 p-4 backdrop-blur transition-all hover:border-accent/60 hover:bg-background/10 sm:p-5"
     >
-      <div className="flex items-center gap-4">
-        <div className="grid h-10 w-10 place-items-center rounded-xl bg-background/10">
+      <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
+        <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-background/10">
           <Icon className="h-4 w-4" />
         </div>
-        <div>
+        <div className="min-w-0 flex-1">
           <div className="text-[10px] font-bold uppercase tracking-[0.25em] text-background/60">
             {label}
           </div>
-          <div className="mt-0.5 text-sm font-semibold">{value}</div>
+          <div className="mt-0.5 truncate text-sm font-semibold">{value}</div>
         </div>
       </div>
-      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+      <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-45" />
     </a>
   );
 }
