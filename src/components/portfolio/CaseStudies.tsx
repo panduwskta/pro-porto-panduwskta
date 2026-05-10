@@ -10,10 +10,10 @@ const CASES = [
     client: "PT Anggun Vital Indonesia (SVO)",
     title: "Scaling a beauty D2C with surgical CPA discipline",
     summary:
-      "Restrukturisasi full-funnel Meta Ads dengan audience segmentation tajam dan creative testing harian. Hasilnya CPA stabil di bawah target SOP perusahaan, dengan budget IDR 180jt/bulan tetap efisien.",
+      "Restrukturisasi full-funnel Meta Ads dengan audience segmentation tajam dan creative testing harian. Hasilnya CPA stabil di bawah target SOP perusahaan, dengan budget tetap efisien.",
     results: [
       { k: "-53%", v: "CPA vs SOP" },
-      { k: "180Jt", v: "Monthly spend" },
+      { k: "3x", v: "ROAS Target" },
       { k: "Full", v: "Funnel coverage" },
     ],
   },
@@ -33,7 +33,7 @@ const CASES = [
   {
     img: caseMice,
     tag: "Visual Production · MICE",
-    client: "Jejak Pribadi & partner brands",
+    client: "Takis Agency & partner brands",
     title: "Visual coverage untuk 20+ corporate event & brand documentation",
     summary:
       "Lead photography & videography untuk MICE, gathering, dan launch event. Output siap pakai untuk recap reels, press kit, sampai aset campaign lanjutan.",
