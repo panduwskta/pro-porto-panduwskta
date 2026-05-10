@@ -259,19 +259,19 @@ function Index() {
                 className="absolute inset-0 rounded-[2.5rem] gradient-warm blur-2xl opacity-70"
                 style={{ animation: "orb 14s ease-in-out infinite" }}
               />
-              <div className="relative h-full w-full overflow-hidden rounded-[2.5rem] glass p-8">
+              <div className="relative h-full w-full overflow-hidden rounded-[2.5rem] glass p-6 sm:p-8">
                 <div className="flex h-full flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                  <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground sm:text-xs">
                     <span>// Monogram</span>
                     <span>2026</span>
                   </div>
                   <div className="relative grid place-items-center">
                     <div
-                      className="absolute h-56 w-56 rounded-full gradient-warm opacity-90 blur-xl"
+                      className="absolute h-40 w-40 rounded-full gradient-warm opacity-90 blur-xl sm:h-56 sm:w-56"
                       style={{ animation: "orb 12s ease-in-out infinite reverse" }}
                     />
                     <span
-                      className="relative text-[14rem] font-black leading-none gradient-text"
+                      className="relative font-black leading-none gradient-text text-[clamp(7rem,28vw,14rem)]"
                       style={{ letterSpacing: "-0.08em" }}
                     >
                       P
