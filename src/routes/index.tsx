@@ -473,7 +473,7 @@ function Index() {
               <div className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
                 05 — Contact
               </div>
-              <h2 className="text-display mt-5 text-4xl md:text-7xl">
+              <h2 className="text-display mt-5 text-3xl sm:text-4xl md:text-7xl">
                 Need campaigns with <span className="gradient-text italic">taste</span> and traction?
               </h2>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-background/70 md:text-lg">
