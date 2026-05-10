@@ -1,3 +1,5 @@
+import Lenis from "lenis";
+import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -11,6 +13,26 @@ import {
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
+  useEffect(() => {
+  const lenis = new Lenis({
+    duration: 1.15,
+    smoothWheel: true,
+    wheelMultiplier: 0.9,
+    touchMultiplier: 1.2,
+  });
+
+  function raf(time: number) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  const rafId = requestAnimationFrame(raf);
+
+  return () => {
+    cancelAnimationFrame(rafId);
+    lenis.destroy();
+  };
+}, []);
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
