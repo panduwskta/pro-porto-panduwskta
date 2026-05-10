@@ -312,7 +312,7 @@ function Index() {
       </div>
 
       {/* Work / Impact */}
-      <section id="work" className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <section id="work" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-14 max-w-2xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
             01 — Selected Impact
@@ -359,7 +359,7 @@ function Index() {
       </section>
 
       {/* Capabilities */}
-      <section id="capabilities" className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <section id="capabilities" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-14 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
@@ -401,7 +401,7 @@ function Index() {
       </section>
 
       {/* Experience */}
-      <section id="experience" className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <section id="experience" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-14 max-w-2xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
             03 — Experience
@@ -439,7 +439,7 @@ function Index() {
       </section>
 
       {/* Skills */}
-      <section className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+      <section className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-12 max-w-2xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
             04 — Skills & Tools
@@ -461,7 +461,7 @@ function Index() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="relative mx-auto max-w-7xl px-6 pb-24 md:pb-36">
+      <section id="contact" className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 sm:pb-24 md:pb-36">
         <div className="reveal relative overflow-hidden rounded-[2.5rem] border border-border bg-foreground p-8 text-background md:p-16">
           <div
             className="absolute -right-20 -top-20 h-96 w-96 rounded-full gradient-warm opacity-60 blur-3xl"
