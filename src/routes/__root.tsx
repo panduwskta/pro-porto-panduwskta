@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Professional Portfolio | Pandu W. Aji" },
+      { name: "description", content: "A bold, expressive portfolio landing page showcasing Pandu W. Aji's expertise in Meta Ads, performance marketing, and creative strategy." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Professional Portfolio | Pandu W. Aji" },
+      { property: "og:description", content: "A bold, expressive portfolio landing page showcasing Pandu W. Aji's expertise in Meta Ads, performance marketing, and creative strategy." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Professional Portfolio | Pandu W. Aji" },
+      { name: "twitter:description", content: "A bold, expressive portfolio landing page showcasing Pandu W. Aji's expertise in Meta Ads, performance marketing, and creative strategy." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1d48d7b0-043b-42ed-a3d6-d3f22a3ceb08/id-preview-ef076aad--2fdc60a0-167c-4d4c-abd7-8ff77153d7e3.lovable.app-1778388132668.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1d48d7b0-043b-42ed-a3d6-d3f22a3ceb08/id-preview-ef076aad--2fdc60a0-167c-4d4c-abd7-8ff77153d7e3.lovable.app-1778388132668.png" },
     ],
     links: [
       {
