@@ -179,7 +179,7 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="relative mx-auto max-w-7xl px-6 pt-16 pb-24 md:pt-24 md:pb-36">
+      <section id="top" className="relative mx-auto max-w-7xl px-4 pt-12 pb-20 sm:px-6 md:pt-24 md:pb-36">
         <div className="grid gap-12 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">
             <div
