@@ -190,12 +190,20 @@ function Index() {
               Available for projects · 2026
             </div>
             <h1
-              className="text-display mt-6 break-words text-[clamp(2rem,9vw,6.5rem)]"
+              className="text-display mt-6 text-[clamp(2.2rem,9vw,6.5rem)] leading-[0.88] tracking-[-0.05em] md:max-w-[900px]"
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.1s" }}
             >
-              Performance <br />
-              meets <span className="gradient-text italic">visual</span> <br />
-              storytelling.
+              <span className="block md:whitespace-nowrap">
+  Performance
+</span>
+
+<span className="block md:whitespace-nowrap">
+  meets <span className="gradient-text italic">visual</span>
+</span>
+
+<span className="block md:whitespace-nowrap">
+  storytelling.
+</span>
             </h1>
             <p
               className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
