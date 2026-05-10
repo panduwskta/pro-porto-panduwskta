@@ -226,26 +226,26 @@ function Index() {
             </div>
 
             <div
-              className="mt-12 flex flex-wrap gap-8 border-t border-border pt-8"
+              className="mt-12 grid grid-cols-3 items-center gap-3 border-t border-border pt-8 sm:flex sm:flex-wrap sm:gap-8"
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.55s" }}
             >
               <div>
-                <div className="text-display text-4xl gradient-text">2+</div>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                <div className="text-display text-2xl gradient-text sm:text-4xl">2+</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground sm:text-xs">
                   Years experience
                 </div>
               </div>
-              <div className="h-12 w-px bg-border" />
+              <div className="hidden h-12 w-px bg-border sm:block" />
               <div>
-                <div className="text-display text-4xl gradient-text">180Jt</div>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                  IDR / month Ads budget
+                <div className="text-display text-2xl gradient-text sm:text-4xl">180Jt</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground sm:text-xs">
+                  IDR / mo Ads
                 </div>
               </div>
-              <div className="h-12 w-px bg-border" />
+              <div className="hidden h-12 w-px bg-border sm:block" />
               <div>
-                <div className="text-display text-4xl gradient-text">D2C</div>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                <div className="text-display text-2xl gradient-text sm:text-4xl">D2C</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground sm:text-xs">
                   Growth focus
                 </div>
               </div>
