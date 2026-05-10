@@ -130,6 +130,11 @@
   .gradient-text {
     background: linear-gradient(95deg, var(--burnt), var(--gold) 60%, var(--burnt));
     -webkit-background-clip: text; background-clip: text; color: transparent;
+    /* Prevent italic descenders/ascenders from being clipped */
+    display: inline-block;
+    padding: 0.05em 0.12em 0.12em 0.06em;
+    margin: -0.05em -0.12em -0.12em -0.06em;
+    overflow: visible;
   }
   .gradient-warm {
     background: linear-gradient(135deg,

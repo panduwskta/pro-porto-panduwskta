@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { ThemeToggle } from "@/components/portfolio/ThemeToggle";
+import { CaseStudies } from "@/components/portfolio/CaseStudies";
 import { useReveal } from "@/hooks/use-reveal";
 import {
   ArrowUpRight,
@@ -340,6 +341,21 @@ function Index() {
             );
           })}
         </div>
+
+        <div className="reveal mt-24 mb-12 max-w-2xl">
+          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+            Case Studies
+          </div>
+          <h2 className="text-display mt-4 text-4xl md:text-6xl">
+            Selected <span className="gradient-text italic">work</span>.
+          </h2>
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
+            Snapshot proyek terpilih — campaign, creative ops, dan production.
+            Tiap case dirangkum singkat: konteks, pendekatan, dan hasil yang bisa
+            langsung dibaca brand.
+          </p>
+        </div>
+        <CaseStudies />
       </section>
 
       {/* Capabilities */}
