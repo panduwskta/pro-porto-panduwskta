@@ -533,20 +533,20 @@ function ContactRow({
   return (
     <a
       href={href}
-      className="group flex items-center justify-between rounded-2xl border border-background/15 bg-background/5 p-5 backdrop-blur transition-all hover:border-accent/60 hover:bg-background/10"
+      className="group flex items-center justify-between gap-3 rounded-2xl border border-background/15 bg-background/5 p-4 backdrop-blur transition-all hover:border-accent/60 hover:bg-background/10 sm:p-5"
     >
-      <div className="flex items-center gap-4">
-        <div className="grid h-10 w-10 place-items-center rounded-xl bg-background/10">
+      <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
+        <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-background/10">
           <Icon className="h-4 w-4" />
         </div>
-        <div>
+        <div className="min-w-0 flex-1">
           <div className="text-[10px] font-bold uppercase tracking-[0.25em] text-background/60">
             {label}
           </div>
-          <div className="mt-0.5 text-sm font-semibold">{value}</div>
+          <div className="mt-0.5 truncate text-sm font-semibold">{value}</div>
         </div>
       </div>
-      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+      <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-45" />
     </a>
   );
 }
