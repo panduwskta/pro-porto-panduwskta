@@ -490,6 +490,164 @@ function IndexInner() {
         <CaseStudies />
       </section>
 
+      {/* Why work with me + Process */}
+      <section id="why" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
+        <div className="reveal mb-14 flex flex-wrap items-end justify-between gap-6">
+          <div className="max-w-2xl">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+              Why work with me?
+            </div>
+            <h2 className="text-display mt-4 text-4xl md:text-6xl">
+              Where data and <span className="gradient-text italic">creative</span> meet.
+            </h2>
+          </div>
+          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+            I'm not just a media buyer and not just a creative person. My strength is
+            connecting performance data with creative execution.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {WHY.map((w, i) => {
+            const Icon = w.icon;
+            return (
+              <article
+                key={i}
+                className="reveal group relative flex flex-col rounded-3xl border border-border bg-card p-8 transition-all duration-500 ring-glow"
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <div className="grid h-12 w-12 place-items-center rounded-2xl border border-border bg-background/40">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="mt-6 text-lg font-extrabold md:text-xl">{w.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{w.body}</p>
+              </article>
+            );
+          })}
+        </div>
+
+        {/* Process */}
+        <div className="reveal mt-24 mb-12 max-w-2xl">
+          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+            How I usually work
+          </div>
+          <h2 className="text-display mt-4 text-3xl md:text-5xl">
+            A simple <span className="gradient-text italic">four-step</span> loop.
+          </h2>
+        </div>
+        <ol className="grid gap-4 md:grid-cols-4">
+          {PROCESS.map((p, i) => {
+            const Icon = p.icon;
+            return (
+              <li
+                key={i}
+                className="reveal relative rounded-3xl border border-border bg-card p-6 transition-all hover:border-primary/40 md:p-7"
+                style={{ transitionDelay: `${i * 70}ms` }}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="text-[10px] font-bold uppercase tracking-[0.25em] text-muted-foreground">
+                    Step 0{i + 1}
+                  </div>
+                  <Icon className="h-4 w-4 text-primary" />
+                </div>
+                <h3 className="text-display mt-5 text-2xl">{p.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+
+      {/* Proof & references */}
+      <section id="proof" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
+        <div className="reveal mb-14 max-w-2xl">
+          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+            Proof & references
+          </div>
+          <h2 className="text-display mt-4 text-4xl md:text-6xl">
+            What collaborators <span className="gradient-text italic">say</span>.
+          </h2>
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
+            Selected notes from clients, creative leads, and project collaborators.
+            Full references available on request.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {TESTIMONIALS.map((t, i) => (
+            <figure
+              key={i}
+              className="reveal relative flex flex-col rounded-3xl border border-border glass p-7 transition-all hover:border-primary/40"
+              style={{ transitionDelay: `${i * 80}ms` }}
+            >
+              <Quote className="h-6 w-6 text-primary" />
+              <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-foreground md:text-[15px]">
+                "{t.quote}"
+              </blockquote>
+              <figcaption className="mt-6 border-t border-border pt-4">
+                <div className="text-sm font-bold">{t.name}</div>
+                <div className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                  {t.role}
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        {/* Worked with */}
+        <div className="reveal mt-20 rounded-3xl border border-border bg-card p-7 md:p-10">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+                Worked with / projects across
+              </div>
+              <h3 className="text-display mt-3 text-2xl md:text-3xl">
+                Brands, agencies, and <span className="gradient-text italic">independent</span> work.
+              </h3>
+            </div>
+            <p className="max-w-xs text-xs leading-relaxed text-muted-foreground">
+              A snapshot of brands, partners, and project types I've collaborated with.
+            </p>
+          </div>
+          <div className="mt-7 flex flex-wrap gap-2.5">
+            {WORKED_WITH.map((w, i) => (
+              <span
+                key={i}
+                className="rounded-full border border-border bg-background/40 px-4 py-2 text-xs font-semibold text-foreground/80"
+              >
+                {w}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Work samples on request */}
+        <div className="reveal mt-10 grid gap-6 rounded-3xl border border-border bg-card p-7 md:grid-cols-12 md:items-center md:p-10">
+          <div className="md:col-span-8">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+              Work samples available on request
+            </div>
+            <h3 className="text-display mt-3 text-2xl md:text-3xl">
+              Private case decks, briefs, and <span className="gradient-text italic">reporting</span>.
+            </h3>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+              Selected campaign breakdowns, creative briefs, production samples, and
+              reporting snapshots can be shared privately when relevant. Some campaign
+              data is sensitive, so this lives outside the public site.
+            </p>
+          </div>
+          <div className="md:col-span-4 md:text-right">
+            <a
+              href="#contact"
+              aria-label="Request work samples"
+              className="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground transition-all hover:scale-[1.03]"
+            >
+              <FileText className="h-4 w-4" /> Request work samples
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Capabilities */}
       <section id="capabilities" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-14 flex flex-wrap items-end justify-between gap-6">
