@@ -833,7 +833,6 @@ function IndexInner() {
             <div className="space-y-4 md:col-span-5">
               <ContactRow icon={Mail} label="Email" value="waskitopandu600@gmail.com" href={LINKS.email} />
               <ContactRow icon={MessageCircle} label="WhatsApp" value="+62 858 9912 2508" href={LINKS.whatsapp} />
-              <ContactRow icon={Phone} label="Phone" value="+62 858 9912 2508" href={LINKS.phone} />
               <ContactRow icon={Linkedin} label="LinkedIn" value="/in/panduwskta" href={LINKS.linkedin} />
             </div>
           </div>
