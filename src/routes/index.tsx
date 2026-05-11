@@ -39,17 +39,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Pandu W. Aji — Meta Ads Specialist & Creative Strategist" },
+      { title: "Pandu W. Aji — Meta Ads & Creative Strategist for D2C Brands" },
       {
         name: "description",
         content:
-          "Pandu W. Aji — Performance marketer, Meta Ads specialist, dan creative strategist untuk D2C, e-commerce, dan content-led brands.",
+          "Meta Ads performance marketer and creative strategist helping D2C and content-led brands improve ad performance through data analysis, creative testing, and scalable content workflows.",
       },
-      { property: "og:title", content: "Pandu W. Aji — Performance meets visual storytelling" },
+      { property: "og:title", content: "Pandu W. Aji — Meta Ads & Creative Strategist for D2C Brands" },
       {
         property: "og:description",
         content:
-          "Campaigns yang look good and perform well. Meta Ads, creative testing, content systems, photo & video.",
+          "Meta Ads, creative testing, and content production systems for D2C and content-led brands. Backed by a visual production background.",
       },
     ],
     links: [
