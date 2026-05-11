@@ -2,6 +2,8 @@ import caseSvo from "@/assets/case-svo.jpg";
 import caseAi from "@/assets/case-ai.jpg";
 import caseMice from "@/assets/case-mice.jpg";
 import { ArrowUpRight } from "lucide-react";
+import { useDetailDrawer } from "@/components/portfolio/DetailDrawer";
+import { CASE_DRAWERS } from "@/components/portfolio/drawer-content";
 
 const CASES = [
   {
