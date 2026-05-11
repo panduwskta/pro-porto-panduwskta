@@ -2,6 +2,8 @@ import caseSvo from "@/assets/case-svo.jpg";
 import caseAi from "@/assets/case-ai.jpg";
 import caseMice from "@/assets/case-mice.jpg";
 import { ArrowUpRight } from "lucide-react";
+import { useDetailDrawer } from "@/components/portfolio/DetailDrawer";
+import { CASE_DRAWERS } from "@/components/portfolio/drawer-content";
 
 const CASES = [
   {
@@ -46,6 +48,7 @@ const CASES = [
 ];
 
 export function CaseStudies() {
+  const { open } = useDetailDrawer();
   return (
     <div className="space-y-10 md:space-y-16">
       {CASES.map((c, i) => {
@@ -99,9 +102,15 @@ export function CaseStudies() {
                   </div>
                 ))}
               </div>
-              <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary">
-                Case summary <ArrowUpRight className="h-3.5 w-3.5" />
-              </div>
+              <button
+                type="button"
+                onClick={() => open(CASE_DRAWERS[i])}
+                aria-label={`Open case summary: ${c.title}`}
+                className="group/btn mt-6 inline-flex cursor-pointer items-center gap-2 self-start rounded-full border border-transparent px-0 py-1 text-xs font-bold uppercase tracking-widest text-primary transition-colors hover:text-foreground"
+              >
+                Case summary
+                <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/btn:rotate-45" />
+              </button>
             </div>
           </article>
         );
