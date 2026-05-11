@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { ThemeToggle } from "@/components/portfolio/ThemeToggle";
 import { CaseStudies } from "@/components/portfolio/CaseStudies";
+import { DetailDrawerProvider, useDetailDrawer } from "@/components/portfolio/DetailDrawer";
+import { CAPABILITY_DRAWERS } from "@/components/portfolio/drawer-content";
 import { useReveal } from "@/hooks/use-reveal";
 import {
   ArrowUpRight,
