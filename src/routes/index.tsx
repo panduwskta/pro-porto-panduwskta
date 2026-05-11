@@ -404,9 +404,15 @@ function IndexInner() {
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
                   {c.body}
                 </p>
-                <div className="mt-8 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary">
-                  Read more <ArrowUpRight className="h-3.5 w-3.5" />
-                </div>
+                <button
+                  type="button"
+                  onClick={() => openDrawer(CAPABILITY_DRAWERS[i])}
+                  aria-label={`Read more about ${c.title}`}
+                  className="group/btn mt-8 inline-flex cursor-pointer items-center gap-2 self-start text-xs font-bold uppercase tracking-widest text-primary transition-colors hover:text-foreground"
+                >
+                  Read more
+                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/btn:rotate-45" />
+                </button>
               </article>
             );
           })}
