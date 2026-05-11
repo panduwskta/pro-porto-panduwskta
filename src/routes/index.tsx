@@ -481,9 +481,10 @@ function IndexInner() {
             Selected <span className="gradient-text italic">work</span>.
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
-            Snapshot proyek terpilih — campaign, creative ops, dan production.
-            Tiap case dirangkum singkat: konteks, pendekatan, dan hasil yang bisa
-            langsung dibaca brand.
+            These are selected examples of how I combine campaign structure,
+            creative testing, and production systems to improve performance.
+            Each case is broken down into problem, approach, and result so brands
+            and recruiters can read it quickly.
           </p>
         </div>
         <CaseStudies />
