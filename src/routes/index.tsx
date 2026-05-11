@@ -92,18 +92,18 @@ const IMPACT = [
 const CAPABILITIES = [
   {
     icon: Megaphone,
-    title: "Performance Marketing",
-    body: "Struktur campaign Meta Ads, CBO/ABO, audience segmentation, scaling strategy, dan monitoring ROAS, CPL, CPA, CTR, sampai frequency — semua diukur dan dikulik.",
+    title: "Meta Ads Performance Strategy",
+    body: "Campaign structure, audience segmentation, budget allocation, and daily performance monitoring for D2C and lead-generation campaigns.",
   },
   {
     icon: Sparkles,
-    title: "Creative Direction",
-    body: "Translate data performance jadi brief visual yang tajam: hook, angle, copy, dan referensi konten yang siap dieksekusi tim kreatif.",
+    title: "Creative Testing & Direction",
+    body: "Turning performance data into sharper hooks, angles, ad copy, and visual briefs that creative teams can execute faster.",
   },
   {
     icon: Layers,
-    title: "Content & Production System",
-    body: "Bangun content calendar, content bank, dan production tracker via Notion / spreadsheet biar workflow tim tetap konsisten dan scalable.",
+    title: "Content Production System",
+    body: "Building content calendars, creative trackers, and repeatable workflows so brands can produce more testable assets consistently.",
   },
 ];
 
@@ -112,25 +112,25 @@ const EXPERIENCE = [
     role: "Meta Ads Specialist / Performance Marketer",
     org: "PT Anggun Vital Indonesia (SVO)",
     period: "Aug 2025 — Dec 2025",
-    body: "Handle Meta Ads campaign end-to-end untuk produk D2C beauty & health. Budget hingga IDR 180M/bulan dengan full-funnel structure (TOFU/MOFU/BOFU). Implementasi AI-driven creative production — voice cloning & AI B-roll untuk mempercepat output iklan.",
+    body: "Handled Meta Ads campaigns end-to-end for a D2C beauty & health brand. Budget up to IDR 180M / month with full-funnel structure (TOFU/MOFU/BOFU) and AI-assisted creative production to accelerate ad output.",
   },
   {
     role: "Digital Marketing Consultant",
     org: "Independent",
     period: "Sep 2024 — Present",
-    body: "Memberikan strategic consulting untuk 2 klien aktif: fine dining restaurant (lead gen) dan wellness/health D2C brand. Berperan sebagai performance advisor — mendiagnosis masalah campaign dan memberikan recovery action plan.",
+    body: "Strategic consulting for active clients across fine dining (lead gen) and wellness / health D2C — performance advisor diagnosing campaign issues and shaping recovery action plans.",
   },
   {
     role: "Head of Digital & Creative",
     org: "PT Karya Cipta Salira (JPO)",
     period: "Dec 2023 — Present",
-    body: "Memimpin strategi digital dan kreatif untuk corporate event organizer. Mengelola tim writers, designers, dan content producers. Menulis dan mengawasi copywriting dalam bahasa Indonesia dan Inggris untuk berbagai campaign.",
+    body: "Lead digital and creative strategy for a corporate event organizer. Manage writers, designers, and content producers across EN/ID copywriting and brand campaigns.",
   },
   {
     role: "Freelance Photographer & Videographer",
     org: "Independent",
     period: "2021 — 2026",
-    body: "Mendokumentasikan 20+ corporate events besar — RAKERNAS KEMNAKER RI, BPJSTK Jakarta, UIN SH Jakarta, PT Kino Indonesia, PT Linfox IDN, dan banyak lagi. Background visual informs creative briefs dan hook strategy untuk Meta campaigns.",
+    body: "Documented 20+ corporate events — RAKERNAS KEMNAKER RI, BPJSTK Jakarta, UIN SH Jakarta, PT Kino Indonesia, PT Linfox IDN, and more. This visual background informs the creative briefs and hook strategy I write for Meta Ads campaigns.",
   },
 ];
 
@@ -146,6 +146,65 @@ const SKILLS = [
 const MARQUEE = [
   "Meta Ads", "D2C Growth", "Creative Testing",
   "Photography", "Video Production", "Content System",
+];
+
+const CREDIBILITY = [
+  { k: "180Jt", v: "IDR / mo ad budget handled" },
+  { k: "-53%", v: "CPA vs internal SOP target" },
+  { k: "20+", v: "Production / event projects" },
+  { k: "D2C", v: "& content-led brand focus" },
+];
+
+const WHY = [
+  {
+    icon: LineChart,
+    title: "Performance-first thinking",
+    body: "I read campaign performance through metrics like CPA, ROAS, CTR, CPL, frequency, and creative fatigue — then turn those signals into practical optimization decisions.",
+  },
+  {
+    icon: FlaskConical,
+    title: "Creative that responds to data",
+    body: "I don't treat creative as guesswork. I use ad performance, hooks, angles, and audience behavior to shape creative briefs that are easier to test and improve.",
+  },
+  {
+    icon: Camera,
+    title: "Production-aware execution",
+    body: "My background in photography, videography, and content systems helps me create ideas that are not only strategic, but also realistic to produce consistently.",
+  },
+];
+
+const PROCESS = [
+  { icon: Search, title: "Diagnose", body: "Review campaign structure, metrics, creative assets, and funnel issues." },
+  { icon: Target, title: "Prioritize", body: "Identify the biggest bottleneck: audience, offer, creative, landing page, or tracking." },
+  { icon: FlaskConical, title: "Test", body: "Build creative angles, campaign experiments, and iteration plans." },
+  { icon: TrendingUp, title: "Improve", body: "Monitor results, document learnings, and scale what works." },
+];
+
+const TESTIMONIALS = [
+  {
+    quote: "Pandu helped us connect performance insights with clearer creative direction. The workflow became easier to execute and improve.",
+    name: "Client / Brand Owner",
+    role: "D2C beauty & health",
+  },
+  {
+    quote: "His strength is not only reading Meta Ads numbers, but translating them into practical creative actions.",
+    name: "Creative Team Lead",
+    role: "In-house creative",
+  },
+  {
+    quote: "Reliable across planning, creative direction, and production execution.",
+    name: "Project Collaborator",
+    role: "Corporate event production",
+  },
+];
+
+const WORKED_WITH = [
+  "PT Anggun Vital Indonesia (SVO)",
+  "Takis Agency",
+  "Independent Consulting",
+  "Corporate Event Projects",
+  "D2C Beauty & Health",
+  "MICE / Brand Documentation",
 ];
 
 function Index() {
