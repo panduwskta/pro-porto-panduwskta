@@ -771,38 +771,71 @@ function IndexInner() {
                 05 — Contact
               </div>
               <h2 className="text-display mt-5 text-3xl sm:text-4xl md:text-7xl">
-                Need campaigns with <span className="gradient-text italic">taste</span> and traction?
+                Let's <span className="gradient-text italic">talk</span>.
               </h2>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-background/70 md:text-lg">
-                Tertarik kolaborasi, hiring, atau diskusi soal performance marketing dan creative strategy?
+                Available for freelance projects, consulting, and performance marketing roles.
               </p>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-background/70 md:text-lg">
-                Kalau brand kamu butuh performance marketer yang bisa baca data sekaligus
-                kolaborasi mulus sama tim kreatif — yuk ngobrol. Saya senang bantu brand
-                yang serius soal growth tapi tetap peduli sama kualitas visual dan storytelling.
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-background/60 md:text-base">
+                Best for D2C and content-led brands that want sharper Meta Ads performance,
+                a stronger creative testing system, or a more reliable content workflow.
+                Recruiters welcome — happy to walk through campaign structure and results live.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
-                  href="mailto:waskitopandu600@gmail.com"
-                  className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground transition-transform hover:scale-105"
+                  href={LINKS.email}
+                  aria-label="Email Pandu"
+                  className="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground transition-transform hover:scale-105"
                 >
                   Email Me
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/panduwskta"
+                  href={LINKS.whatsapp}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-background/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-background hover:text-foreground"
+                  aria-label="Message on WhatsApp"
+                  className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-background/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-background hover:text-foreground"
+                >
+                  <MessageCircle className="h-4 w-4" /> WhatsApp
+                </a>
+                <a
+                  href={LINKS.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open LinkedIn profile"
+                  className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-background/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-background hover:text-foreground"
                 >
                   <Linkedin className="h-4 w-4" /> LinkedIn
                 </a>
               </div>
+              <div className="mt-6 flex flex-wrap gap-4 text-xs font-semibold uppercase tracking-[0.2em] text-background/60">
+                <a
+                  href={LINKS.cv}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Download CV"
+                  className="inline-flex cursor-pointer items-center gap-1.5 transition-colors hover:text-background"
+                >
+                  <Download className="h-3.5 w-3.5" /> Download CV
+                </a>
+                <span className="text-background/30">/</span>
+                <a
+                  href={LINKS.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open LinkedIn profile"
+                  className="inline-flex cursor-pointer items-center gap-1.5 transition-colors hover:text-background"
+                >
+                  <Linkedin className="h-3.5 w-3.5" /> Open LinkedIn
+                </a>
+              </div>
             </div>
             <div className="space-y-4 md:col-span-5">
-              <ContactRow icon={Mail} label="Email" value="waskitopandu600@gmail.com" href="mailto:waskitopandu600@gmail.com" />
-              <ContactRow icon={Phone} label="Phone" value="+62 858 9912 2508" href="tel:+6285899122508" />
-              <ContactRow icon={Linkedin} label="LinkedIn" value="/in/panduwskta" href="https://www.linkedin.com/in/panduwskta" />
+              <ContactRow icon={Mail} label="Email" value="waskitopandu600@gmail.com" href={LINKS.email} />
+              <ContactRow icon={MessageCircle} label="WhatsApp" value="+62 858 9912 2508" href={LINKS.whatsapp} />
+              <ContactRow icon={Phone} label="Phone" value="+62 858 9912 2508" href={LINKS.phone} />
+              <ContactRow icon={Linkedin} label="LinkedIn" value="/in/panduwskta" href={LINKS.linkedin} />
             </div>
           </div>
         </div>
