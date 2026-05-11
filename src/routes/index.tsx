@@ -428,6 +428,20 @@ function IndexInner() {
         </div>
       </div>
 
+      {/* Credibility strip */}
+      <section aria-label="Credibility highlights" className="relative mx-auto max-w-7xl px-4 pt-14 sm:px-6 md:pt-20">
+        <div className="reveal grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-4">
+          {CREDIBILITY.map((c, i) => (
+            <div key={i} className="bg-card p-6 md:p-8">
+              <div className="text-display text-3xl gradient-text md:text-5xl">{c.k}</div>
+              <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.22em] text-muted-foreground md:text-xs">
+                {c.v}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Work / Impact */}
       <section id="work" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 md:py-32">
         <div className="reveal mb-14 max-w-2xl">
