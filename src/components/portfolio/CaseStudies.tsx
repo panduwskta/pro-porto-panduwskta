@@ -48,6 +48,7 @@ const CASES = [
 ];
 
 export function CaseStudies() {
+  const { open } = useDetailDrawer();
   return (
     <div className="space-y-10 md:space-y-16">
       {CASES.map((c, i) => {
