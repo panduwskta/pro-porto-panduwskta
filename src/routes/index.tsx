@@ -283,23 +283,15 @@ function IndexInner() {
               </div>
             </div>
              <h1
-              className="text-display mt-6 text-[clamp(2.2rem,8vw,6.5rem)] leading-[0.88] tracking-[-0.05em] max-w-full lg:max-w-[720px] xl:max-w-[780px] 2xl:max-w-[860px]"
-              className="mt-6 max-w-full text-[clamp(2.2rem,8vw,4.8rem)] font-black uppercase leading-[0.88] tracking-[-0.06em] lg:max-w-[680px] xl:max-w-[760px] 2xl:max-w-[840px]"
-              style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.1s" }}
-            >
-              <span className="block md:whitespace-nowrap">
-  Performance
-</span>
-<span className="block md:whitespace-nowrap">
-              <span className="block lg:whitespace-nowrap">Performance</span>
-<span className="block lg:whitespace-nowrap">
-  meets <span className="gradient-text italic">visual</span>
-</span>
-<span className="block md:whitespace-nowrap">
-  storytelling.
-</span>
-<span className="block lg:whitespace-nowrap">storytelling.</span>
-            </h1>
+  className="mt-6 text-[clamp(2.2rem,8vw,6.5rem)] font-black uppercase leading-[0.88] tracking-[-0.05em] max-w-full lg:max-w-[720px] xl:max-w-[780px] 2xl:max-w-[860px] md:whitespace-nowrap"
+  style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.1s" }}
+>
+  <span className="block md:whitespace-nowrap">Performance</span>
+  <span className="block md:whitespace-nowrap">
+    meets <span className="gradient-text italic">visual</span>
+  </span>
+  <span className="block md:whitespace-nowrap">storytelling.</span>
+</h1>
             <p
               className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.25s" }}
