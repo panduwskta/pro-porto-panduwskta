@@ -132,6 +132,15 @@ const MARQUEE = [
 ];
 
 function Index() {
+  return (
+    <DetailDrawerProvider>
+      <IndexInner />
+    </DetailDrawerProvider>
+  );
+}
+
+function IndexInner() {
+  const { open: openDrawer } = useDetailDrawer();
   useReveal();
 
   useEffect(() => {
