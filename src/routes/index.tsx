@@ -287,8 +287,7 @@ function IndexInner() {
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.1s" }}
             >
               <span className="block lg:whitespace-nowrap">Performance</span>
-              <span className="block lg:whitespace-nowrap">
-                meets <span className="gradient-text italic">visual</span>
+              <span className="block lg:whitespace-nowrap"> meets <span className="gradient-text italic">visual</span></span>
               <span className="block md:whitespace-nowrap">storytelling.</span>
             </h1>
             <p
