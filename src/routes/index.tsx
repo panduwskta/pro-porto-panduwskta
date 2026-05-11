@@ -16,7 +16,24 @@ import {
   Megaphone,
   Layers,
   Wand2,
+  Download,
+  FileText,
+  Search,
+  Target,
+  FlaskConical,
+  LineChart,
+  Quote,
+  MessageCircle,
 } from "lucide-react";
+
+// === Editable links (update these as needed) ===
+const LINKS = {
+  cv: "#", // TODO: replace with public CV URL when ready
+  linkedin: "https://www.linkedin.com/in/panduwskta",
+  email: "mailto:waskitopandu600@gmail.com",
+  whatsapp: "https://wa.me/6285899122508",
+  phone: "tel:+6285899122508",
+};
 
 export const Route = createFileRoute("/")({
   component: Index,
