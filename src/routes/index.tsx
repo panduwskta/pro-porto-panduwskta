@@ -270,30 +270,34 @@ function IndexInner() {
         <div className="grid gap-12 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">
             <div
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur"
+              className="flex flex-wrap items-center gap-2"
               style={{ animation: "fade-in 0.6s ease-out both" }}
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Available for projects · 2026
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                Available for projects · 2026
+              </div>
+              <div className="inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                Meta Ads · Creative Testing · D2C Growth
+              </div>
             </div>
             <h1
               className="mt-6 max-w-full text-[clamp(2.2rem,8vw,4.8rem)] font-black uppercase leading-[0.88] tracking-[-0.06em] lg:max-w-[680px] xl:max-w-[760px] 2xl:max-w-[840px]"
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.1s" }}
             >
-              <span className="block lg:whitespace-nowrap">Performance</span>
-<span className="block lg:whitespace-nowrap">
-  meets <span className="gradient-text italic">visual</span>
-</span>
-<span className="block lg:whitespace-nowrap">storytelling.</span>
+              <span className="block lg:whitespace-nowrap">Meta Ads built</span>
+              <span className="block lg:whitespace-nowrap">
+                for <span className="gradient-text italic">D2C</span> growth.
+              </span>
             </h1>
             <p
               className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
               style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.25s" }}
             >
-              Saya Pandu — gabungin <strong className="text-foreground">data Meta Ads</strong>,
-              creative direction, dan visual production buat bantu D2C, e-commerce, dan
-              content-led brand bikin campaign yang <em>look good</em> sekaligus
-              <em> perform well</em>.
+              I'm Pandu — a <strong className="text-foreground">Meta Ads performance marketer
+              and creative strategist</strong> helping D2C and content-led brands improve
+              ad performance through data analysis, creative testing, and scalable
+              content workflows. Backed by a visual production background.
             </p>
             <div
               className="mt-9 flex flex-wrap gap-3"
@@ -301,16 +305,40 @@ function IndexInner() {
             >
               <a
                 href="#work"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground transition-all hover:scale-[1.03] hover:shadow-[0_18px_40px_-12px_color-mix(in_oklch,var(--burnt)_70%,transparent)]"
+                className="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground transition-all hover:scale-[1.03] hover:shadow-[0_18px_40px_-12px_color-mix(in_oklch,var(--burnt)_70%,transparent)]"
               >
                 View My Work
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border border-foreground/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors hover:border-foreground hover:bg-foreground hover:text-background"
+                className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-foreground/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors hover:border-foreground hover:bg-foreground hover:text-background"
               >
                 Start a Project
+              </a>
+            </div>
+            <div
+              className="mt-4 flex flex-wrap gap-4 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground"
+              style={{ animation: "fade-up 0.9s cubic-bezier(.16,1,.3,1) both", animationDelay: "0.5s" }}
+            >
+              <a
+                href={LINKS.cv}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Download CV"
+                className="group inline-flex cursor-pointer items-center gap-1.5 transition-colors hover:text-foreground"
+              >
+                <Download className="h-3.5 w-3.5" /> Download CV
+              </a>
+              <span className="text-border">/</span>
+              <a
+                href={LINKS.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open LinkedIn profile"
+                className="group inline-flex cursor-pointer items-center gap-1.5 transition-colors hover:text-foreground"
+              >
+                <Linkedin className="h-3.5 w-3.5" /> Open LinkedIn
               </a>
             </div>
 
