@@ -10,16 +10,12 @@ const CASES = [
     img: caseSvo,
     tag: "D2C · Beauty & Health · Meta Ads",
     client: "PT Anggun Vital Indonesia (SVO)",
-    title: "Meta Ads full-funnel system with CPA 53% below SOP",
-    problem:
-      "Brand needed disciplined CPA control while scaling Meta Ads spend up to IDR 180M / month across a full TOFU/MOFU/BOFU funnel.",
-    approach:
-      "Restructured campaign architecture (CBO + ABO), sharpened audience segmentation per funnel stage, and ran daily creative-level optimization based on CPA, ROAS, CTR, and frequency.",
-    result:
-      "CPA stabilized 53% below the company SOP target with a clean, scalable structure the internal team can keep iterating on.",
+    title: "Meta Ads full-funnel system",
+    summary:
+      "Built and optimized a full-funnel Meta Ads system handling up to IDR 180M/month in spend across TOFU, MOFU, and BOFU stages. Reworked campaign structure using a mix of CBO and ABO, refined audience segmentation, and executed daily creative optimization based on CPA, ROAS, CTR, and frequency performance. The result was a stable and scalable campaign system that maintained CPA 53% below the company’s SOP target while remaining efficient for long-term iteration by the internal team.",
     keyMetric: { k: "-53%", v: "CPA vs SOP target" },
     results: [
-      { k: "180Jt", v: "IDR / mo budget" },
+      { k: "3x", v: "ROAS Target" },
       { k: "Full", v: "Funnel coverage" },
       { k: "Daily", v: "Creative ops" },
     ],
@@ -29,12 +25,8 @@ const CASES = [
     tag: "Creative Testing · AI Workflow",
     client: "Internal R&D · Performance creative",
     title: "AI-assisted creative pipeline for 2x faster ad iteration",
-    problem:
-      "Creative testing demanded more hooks and ad variants every week, but production headcount and budget could not scale at the same pace.",
-    approach:
-      "Built an AI-assisted workflow with voice cloning, generative B-roll, and a repeatable hook-testing matrix so the team could push fresh angles without rebuilding from scratch.",
-    result:
-      "Doubled creative iteration speed, lowered production cost ~40%, and made weekly hook drops a normal cadence.",
+    summary:
+      "Developed an AI-assisted creative production workflow to solve increasing demand for weekly ad variations without scaling production cost and headcount at the same rate. By combining voice cloning, generative B-roll, and a structured hook-testing system, the team was able to produce and test new creative angles much faster. The workflow doubled creative iteration speed, reduced production costs by around 40%, and established a sustainable cadence for weekly hook launches.",
     keyMetric: { k: "2x", v: "Iteration speed" },
     results: [
       { k: "-40%", v: "Production cost" },
@@ -47,12 +39,8 @@ const CASES = [
     tag: "Supporting · Visual Production",
     client: "Takis Agency & corporate event partners",
     title: "Visual production background that strengthens creative direction",
-    problem:
-      "Brands needed event documentation that could be reused beyond the day itself — for recap reels, press kits, and follow-up campaigns.",
-    approach:
-      "Led photography and videography for 20+ corporate events, gatherings, and launch activities, planning shot lists with downstream content reuse in mind.",
-    result:
-      "Multi-format visual assets ready for social, internal decks, and brand communication — a foundation that now informs the creative briefs I write for Meta Ads.",
+    summary:
+      "Led photography and videography production for 20+ corporate events, brand gatherings, and launch activations with a strong focus on content reusability beyond the event itself. Planned visual coverage strategically to support recap reels, social media assets, press materials, internal presentations, and follow-up campaigns. This production background now directly shapes how I approach creative briefing and visual direction for Meta Ads campaigns.",
     keyMetric: { k: "20+", v: "Event projects" },
     results: [
       { k: "4K", v: "Video deliverables" },
@@ -100,32 +88,9 @@ export function CaseStudies() {
                 <h3 className="text-display mt-4 text-2xl md:text-4xl">{c.title}</h3>
                 <div className="mt-3 text-sm font-semibold text-muted-foreground">{c.client}</div>
 
-                <dl className="mt-6 space-y-4">
-                  <div>
-                    <dt className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">
-                      Problem
-                    </dt>
-                    <dd className="mt-1.5 text-sm leading-relaxed text-muted-foreground md:text-[15px]">
-                      {c.problem}
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">
-                      Approach
-                    </dt>
-                    <dd className="mt-1.5 text-sm leading-relaxed text-muted-foreground md:text-[15px]">
-                      {c.approach}
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">
-                      Result
-                    </dt>
-                    <dd className="mt-1.5 text-sm leading-relaxed text-foreground md:text-[15px]">
-                      {c.result}
-                    </dd>
-                  </div>
-                </dl>
+                <p className="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  {c.summary}
+                </p>
               </div>
 
               <div className="mt-8 grid grid-cols-3 gap-3 border-t border-border pt-6">
