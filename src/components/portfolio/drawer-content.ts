@@ -3,11 +3,11 @@ import type { DrawerContent } from "@/components/portfolio/DetailDrawer";
 export const CASE_DRAWERS: DrawerContent[] = [
   {
     eyebrow: "Case 01 · D2C Beauty & Health",
-    title: "Meta Ads full-funnel system with 53% lower CPA",
+    title: "Meta Ads full-funnel system",
     client: "PT Anggun Vital Indonesia (SVO)",
     sections: [
       {
-        label: "Problem",
+        label: "Challenge",
         body: "Campaign needed disciplined CPA control while scaling spend up to IDR 180M per month across a full TOFU/MOFU/BOFU funnel.",
       },
       {
