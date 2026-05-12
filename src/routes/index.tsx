@@ -28,7 +28,7 @@ import {
 
 // === Editable links (update these as needed) ===
 const LINKS = {
-  cv: "@/public/CV-Pandu-Marketer-UPDT2026.pdf", // TODO: replace with public CV URL when ready
+  cv: "/CV-Pandu-Marketer-UPDT2026.pdf", // TODO: replace with public CV URL when ready
   linkedin: "https://www.linkedin.com/in/panduwskta",
   email: "mailto:waskitopandu600@gmail.com",
   whatsapp: "https://wa.me/6285899122508",
