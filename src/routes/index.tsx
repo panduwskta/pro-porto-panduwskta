@@ -887,3 +887,128 @@ function ContactRow({
     </a>
   );
 }
+
+function AboutPandu() {
+  const photoRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const el = photoRef.current;
+    const img = imgRef.current;
+    if (!el || !img) return;
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    img.style.transform = `scale(1.03) translate3d(${x * -8}px, ${y * -8}px, 0)`;
+    el.style.setProperty("--mx", `${(e.clientX - r.left) / r.width * 100}%`);
+    el.style.setProperty("--my", `${(e.clientY - r.top) / r.height * 100}%`);
+  };
+
+  const handleLeave = () => {
+    const img = imgRef.current;
+    if (img) img.style.transform = "";
+  };
+
+  const tags = ["Meta Ads", "Creative Testing", "Visual Production"];
+
+  return (
+    <section
+      id="about"
+      aria-label="About Pandu"
+      className="relative mx-auto max-w-7xl px-4 pt-14 sm:px-6 md:pt-20"
+    >
+      <div className="reveal group/about relative overflow-hidden rounded-3xl border border-border bg-card/70 p-6 backdrop-blur-md transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_30px_70px_-30px_color-mix(in_oklch,var(--burnt)_55%,transparent)] sm:p-8 md:p-10">
+        {/* gradient border + soft glow on hover */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-500 group-hover/about:opacity-100"
+          style={{
+            background:
+              "linear-gradient(135deg, color-mix(in oklch, var(--burnt) 35%, transparent), color-mix(in oklch, var(--gold) 25%, transparent) 60%, transparent)",
+            mask: "linear-gradient(#000,#000) content-box, linear-gradient(#000,#000)",
+            WebkitMask: "linear-gradient(#000,#000) content-box, linear-gradient(#000,#000)",
+            maskComposite: "exclude",
+            WebkitMaskComposite: "xor",
+            padding: "1px",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full gradient-warm opacity-0 blur-3xl transition-opacity duration-700 group-hover/about:opacity-40"
+        />
+
+        <div className="relative grid gap-8 md:grid-cols-12 md:items-center md:gap-12">
+          {/* Copy */}
+          <div className="md:col-span-7">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+              About Pandu
+            </div>
+            <h2 className="text-display mt-4 text-3xl md:text-5xl">
+              Performance marketer with{" "}
+              <span className="gradient-text italic">creative production</span> instincts.
+            </h2>
+            <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+              I combine Meta Ads performance thinking with creative direction and
+              visual production experience. My edge is connecting campaign numbers
+              with practical creative decisions — from audience structure and hook
+              testing to content workflows that teams can actually execute.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {tags.map((t) => (
+                <span
+                  key={t}
+                  className="cursor-default rounded-full border border-border bg-background/40 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground transition-all duration-300 hover:border-primary/60 hover:bg-primary/10 hover:text-foreground"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Photo */}
+          <div className="md:col-span-5">
+            <div
+              ref={photoRef}
+              onMouseMove={handleMove}
+              onMouseLeave={handleLeave}
+              className="group/photo relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-border shadow-[0_20px_60px_-25px_rgba(0,0,0,0.6)] transition-shadow duration-500 hover:shadow-[0_30px_80px_-25px_color-mix(in_oklch,var(--burnt)_55%,transparent)]"
+              style={
+                {
+                  // CSS vars consumed by the highlight overlay
+                  ["--mx" as never]: "50%",
+                  ["--my" as never]: "50%",
+                } as React.CSSProperties
+              }
+            >
+              {/* TODO: Replace src/assets/profile-placeholder.jpg with your own photo */}
+              <img
+                ref={imgRef}
+                src={profilePhoto}
+                alt="Portrait of Pandu W. Aji"
+                width={768}
+                height={960}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 ease-out motion-reduce:transform-none"
+              />
+              {/* moving highlight overlay */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 opacity-0 mix-blend-soft-light transition-opacity duration-500 group-hover/photo:opacity-100 motion-reduce:hidden"
+                style={{
+                  background:
+                    "radial-gradient(220px circle at var(--mx) var(--my), rgba(255,255,255,0.35), transparent 60%)",
+                }}
+              />
+              {/* subtle bottom gradient for editorial feel */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
