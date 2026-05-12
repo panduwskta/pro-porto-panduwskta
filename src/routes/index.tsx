@@ -431,6 +431,9 @@ function IndexInner() {
         </div>
       </div>
 
+      {/* About Pandu */}
+      <AboutPandu />
+
       {/* Credibility strip */}
       <section aria-label="Credibility highlights" className="relative mx-auto max-w-7xl px-4 pt-14 sm:px-6 md:pt-20">
         <div className="reveal grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-4">
