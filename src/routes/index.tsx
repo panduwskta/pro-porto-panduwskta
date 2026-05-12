@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 // TODO: Replace this image with your own portrait. Drop a new file into
 // src/assets/ and update this import path. Recommended ratio ~4:5 portrait.
-import profilePhoto from "@/assets/profile-placeholder.jpg";
+import profilePhoto from "@/assets/pnd-potrait2.webp";
 import { ThemeToggle } from "@/components/portfolio/ThemeToggle";
 import { CaseStudies } from "@/components/portfolio/CaseStudies";
 import { DetailDrawerProvider, useDetailDrawer } from "@/components/portfolio/DetailDrawer";
