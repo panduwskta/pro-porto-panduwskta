@@ -598,8 +598,8 @@ function IndexInner() {
           ))}
         </div>
 
-        {/* Worked with */}
-        <div className="reveal mt-20 rounded-3xl border border-border bg-card p-7 md:p-10">
+        {/* Worked with — animated logo marquee (placeholders) */}
+        <div className="reveal mt-20 overflow-hidden rounded-3xl border border-border bg-card p-7 md:p-10">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
@@ -610,19 +610,40 @@ function IndexInner() {
               </h3>
             </div>
             <p className="max-w-xs text-xs leading-relaxed text-muted-foreground">
-              A snapshot of brands, partners, and project types I've collaborated with.
+              A snapshot of brands, partners, and project types I've collaborated with. Logos are placeholders for now.
             </p>
           </div>
-          <div className="mt-7 flex flex-wrap gap-2.5">
-            {WORKED_WITH.map((w, i) => (
-              <span
-                key={i}
-                className="rounded-full border border-border bg-background/40 px-4 py-2 text-xs font-semibold text-foreground/80"
-              >
-                {w}
-              </span>
-            ))}
+          <div className="mt-8">
+            <LogoMarquee />
           </div>
+        </div>
+
+        {/* Best fit for — recruiter/client clarity */}
+        <div className="reveal mt-10 rounded-3xl border border-border bg-card p-7 md:p-10">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+                Best fit for
+              </div>
+              <h3 className="text-display mt-3 text-2xl md:text-3xl">
+                Who I work <span className="gradient-text italic">best</span> with.
+              </h3>
+            </div>
+            <p className="max-w-xs text-xs leading-relaxed text-muted-foreground">
+              Available for freelance projects, consulting, and performance marketing roles.
+            </p>
+          </div>
+          <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+            {BEST_FIT.map((b, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-3 rounded-2xl border border-border bg-background/40 p-4 text-sm leading-relaxed text-foreground/90 transition-colors hover:border-primary/40"
+              >
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Work samples on request */}
