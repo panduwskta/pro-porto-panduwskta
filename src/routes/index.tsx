@@ -7,6 +7,7 @@ import { ThemeToggle } from "@/components/portfolio/ThemeToggle";
 import { CaseStudies } from "@/components/portfolio/CaseStudies";
 import { DetailDrawerProvider, useDetailDrawer } from "@/components/portfolio/DetailDrawer";
 import { CAPABILITY_DRAWERS } from "@/components/portfolio/drawer-content";
+import { LogoMarquee } from "@/components/portfolio/LogoMarquee";
 import { useReveal } from "@/hooks/use-reveal";
 import {
   ArrowUpRight,
@@ -42,17 +43,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Pandu W. Aji — Meta Ads & Creative Strategist for D2C Brands" },
+      { title: "Pandu W. Aji — Meta Ads Performance Marketer & Creative Strategist" },
       {
         name: "description",
         content:
-          "Meta Ads performance marketer and creative strategist helping D2C and content-led brands improve ad performance through data analysis, creative testing, and scalable content workflows.",
+          "Portfolio of Pandu W. Aji, a Meta Ads performance marketer and creative strategist helping D2C and content-led brands improve CPA, creative testing, and scalable content workflows.",
       },
-      { property: "og:title", content: "Pandu W. Aji — Meta Ads & Creative Strategist for D2C Brands" },
+      { property: "og:title", content: "Pandu W. Aji — Meta Ads Performance Marketer & Creative Strategist" },
       {
         property: "og:description",
         content:
-          "Meta Ads, creative testing, and content production systems for D2C and content-led brands. Backed by a visual production background.",
+          "Portfolio of Pandu W. Aji, a Meta Ads performance marketer and creative strategist helping D2C and content-led brands improve CPA, creative testing, and scalable content workflows.",
       },
     ],
     links: [
@@ -76,19 +77,19 @@ const IMPACT = [
   {
     metric: "53%",
     title: "More efficient CPA",
-    body: "CPA tembus 53% di bawah target SOP perusahaan lewat audience segmentation dan creative-level optimization.",
+    body: "CPA landed 53% below the internal SOP target through disciplined audience segmentation and daily creative-level optimization.",
     icon: TrendingUp,
   },
   {
     metric: "2x",
     title: "Faster creative iteration",
-    body: "Implementasi AI voice cloning dan generative B-roll workflow buat ngebut produksi varian iklan tanpa kehilangan brand voice.",
+    body: "Built an AI-assisted workflow with voice cloning and generative B-roll to speed up ad variant production without losing brand voice.",
     icon: Wand2,
   },
   {
     metric: "20+",
     title: "MICE & event projects",
-    body: "Pengalaman photography & videography untuk corporate event, gathering, dan brand documentation berskala nasional.",
+    body: "Photography and videography experience across corporate events, gatherings, and brand documentation at a national scale.",
     icon: Camera,
   },
 ];
@@ -186,29 +187,27 @@ const PROCESS = [
 
 const TESTIMONIALS = [
   {
-    quote: "Pandu helped us connect performance insights with clearer creative direction. The workflow became easier to execute and improve.",
-    name: "Client / Brand Owner",
-    role: "D2C beauty & health",
+    quote: "Pandu connected performance insights to clearer creative direction. Our workflow became easier to execute and improve week over week.",
+    name: "Founder",
+    role: "D2C Beauty & Health Brand",
   },
   {
-    quote: "His strength is not only reading Meta Ads numbers, but translating them into practical creative actions.",
-    name: "Creative Team Lead",
-    role: "In-house creative",
+    quote: "His strength is not just reading Meta Ads numbers — he translates them into practical creative actions the team can ship.",
+    name: "Creative Lead",
+    role: "In-house Performance Team",
   },
   {
-    quote: "Reliable across planning, creative direction, and production execution.",
-    name: "Project Collaborator",
-    role: "Corporate event production",
+    quote: "Reliable across planning, creative direction, and production execution. Always delivered on time and on brief.",
+    name: "Project Manager",
+    role: "Corporate Event Production",
   },
 ];
 
-const WORKED_WITH = [
-  "PT Anggun Vital Indonesia (SVO)",
-  "Takis Agency",
-  "Independent Consulting",
-  "Corporate Event Projects",
-  "D2C Beauty & Health",
-  "MICE / Brand Documentation",
+const BEST_FIT = [
+  "D2C brands that need better Meta Ads efficiency",
+  "Teams that need a faster creative testing workflow",
+  "Recruiters hiring for Meta Ads Specialist, Performance Marketer, Growth Marketer, or Creative Strategist roles",
+  "Brands that need someone who understands both the numbers and production reality",
 ];
 
 function Index() {
@@ -599,8 +598,8 @@ function IndexInner() {
           ))}
         </div>
 
-        {/* Worked with */}
-        <div className="reveal mt-20 rounded-3xl border border-border bg-card p-7 md:p-10">
+        {/* Worked with — animated logo marquee (placeholders) */}
+        <div className="reveal mt-20 overflow-hidden rounded-3xl border border-border bg-card p-7 md:p-10">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
@@ -611,19 +610,40 @@ function IndexInner() {
               </h3>
             </div>
             <p className="max-w-xs text-xs leading-relaxed text-muted-foreground">
-              A snapshot of brands, partners, and project types I've collaborated with.
+              A snapshot of brands, partners, and project types I've collaborated with. Logos are placeholders for now.
             </p>
           </div>
-          <div className="mt-7 flex flex-wrap gap-2.5">
-            {WORKED_WITH.map((w, i) => (
-              <span
-                key={i}
-                className="rounded-full border border-border bg-background/40 px-4 py-2 text-xs font-semibold text-foreground/80"
-              >
-                {w}
-              </span>
-            ))}
+          <div className="mt-8">
+            <LogoMarquee />
           </div>
+        </div>
+
+        {/* Best fit for — recruiter/client clarity */}
+        <div className="reveal mt-10 rounded-3xl border border-border bg-card p-7 md:p-10">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+                Best fit for
+              </div>
+              <h3 className="text-display mt-3 text-2xl md:text-3xl">
+                Who I work <span className="gradient-text italic">best</span> with.
+              </h3>
+            </div>
+            <p className="max-w-xs text-xs leading-relaxed text-muted-foreground">
+              Available for freelance projects, consulting, and performance marketing roles.
+            </p>
+          </div>
+          <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+            {BEST_FIT.map((b, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-3 rounded-2xl border border-border bg-background/40 p-4 text-sm leading-relaxed text-foreground/90 transition-colors hover:border-primary/40"
+              >
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Work samples on request */}
@@ -667,8 +687,7 @@ function IndexInner() {
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Tiga area utama yang sering jadi titik temu antara performance, kreatif,
-            dan operasional brand.
+            Three core areas where performance, creative, and brand operations meet.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
