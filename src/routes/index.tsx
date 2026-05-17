@@ -203,11 +203,12 @@ const TESTIMONIALS = [
   },
 ];
 
-const BEST_FIT = [
-  "D2C brands that need better Meta Ads efficiency",
-  "Teams that need a faster creative testing workflow",
-  "Recruiters hiring for Meta Ads Specialist, Performance Marketer, Growth Marketer, or Creative Strategist roles",
-  "Brands that need someone who understands both the numbers and production reality",
+// Compact "best fit" tags — keep short, used in the slim availability strip.
+const BEST_FIT_TAGS = [
+  "D2C brands",
+  "Meta Ads teams",
+  "Creative testing workflows",
+  "Growth & performance roles",
 ];
 
 function Index() {
