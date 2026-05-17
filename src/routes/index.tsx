@@ -687,8 +687,7 @@ function IndexInner() {
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Tiga area utama yang sering jadi titik temu antara performance, kreatif,
-            dan operasional brand.
+            Three core areas where performance, creative, and brand operations meet.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
