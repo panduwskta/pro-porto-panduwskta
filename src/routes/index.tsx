@@ -77,19 +77,19 @@ const IMPACT = [
   {
     metric: "53%",
     title: "More efficient CPA",
-    body: "CPA tembus 53% di bawah target SOP perusahaan lewat audience segmentation dan creative-level optimization.",
+    body: "CPA landed 53% below the internal SOP target through disciplined audience segmentation and daily creative-level optimization.",
     icon: TrendingUp,
   },
   {
     metric: "2x",
     title: "Faster creative iteration",
-    body: "Implementasi AI voice cloning dan generative B-roll workflow buat ngebut produksi varian iklan tanpa kehilangan brand voice.",
+    body: "Built an AI-assisted workflow with voice cloning and generative B-roll to speed up ad variant production without losing brand voice.",
     icon: Wand2,
   },
   {
     metric: "20+",
     title: "MICE & event projects",
-    body: "Pengalaman photography & videography untuk corporate event, gathering, dan brand documentation berskala nasional.",
+    body: "Photography and videography experience across corporate events, gatherings, and brand documentation at a national scale.",
     icon: Camera,
   },
 ];
