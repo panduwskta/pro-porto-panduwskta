@@ -187,29 +187,27 @@ const PROCESS = [
 
 const TESTIMONIALS = [
   {
-    quote: "Pandu helped us connect performance insights with clearer creative direction. The workflow became easier to execute and improve.",
-    name: "Client / Brand Owner",
-    role: "D2C beauty & health",
+    quote: "Pandu connected performance insights to clearer creative direction. Our workflow became easier to execute and improve week over week.",
+    name: "Founder",
+    role: "D2C Beauty & Health Brand",
   },
   {
-    quote: "His strength is not only reading Meta Ads numbers, but translating them into practical creative actions.",
-    name: "Creative Team Lead",
-    role: "In-house creative",
+    quote: "His strength is not just reading Meta Ads numbers — he translates them into practical creative actions the team can ship.",
+    name: "Creative Lead",
+    role: "In-house Performance Team",
   },
   {
-    quote: "Reliable across planning, creative direction, and production execution.",
-    name: "Project Collaborator",
-    role: "Corporate event production",
+    quote: "Reliable across planning, creative direction, and production execution. Always delivered on time and on brief.",
+    name: "Project Manager",
+    role: "Corporate Event Production",
   },
 ];
 
-const WORKED_WITH = [
-  "PT Anggun Vital Indonesia (SVO)",
-  "Takis Agency",
-  "Independent Consulting",
-  "Corporate Event Projects",
-  "D2C Beauty & Health",
-  "MICE / Brand Documentation",
+const BEST_FIT = [
+  "D2C brands that need better Meta Ads efficiency",
+  "Teams that need a faster creative testing workflow",
+  "Recruiters hiring for Meta Ads Specialist, Performance Marketer, Growth Marketer, or Creative Strategist roles",
+  "Brands that need someone who understands both the numbers and production reality",
 ];
 
 function Index() {
