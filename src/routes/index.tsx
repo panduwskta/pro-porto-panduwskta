@@ -775,6 +775,9 @@ function IndexInner() {
               <p className="mt-6 max-w-xl text-base leading-relaxed text-background/70 md:text-lg">
                 Available for freelance projects, consulting, and performance marketing roles.
               </p>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-background/60">
+                <span className="font-semibold text-background/80">Best fit:</span> D2C brands, Meta Ads teams, creative testing workflows, and growth / performance roles.
+              </p>
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-background/60 md:text-base">
                 Best for D2C and content-led brands that want sharper Meta Ads performance,
                 a stronger creative testing system, or a more reliable content workflow.
