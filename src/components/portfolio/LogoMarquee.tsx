@@ -1,115 +1,73 @@
 // =============================================================
 // LogoMarquee
-// Two-row animated logo strip with alternating scroll directions,
-// edge fade masks, hover-to-slow, and a reduced-motion static grid.
+// Two-row borderless logo wall with alternating scroll directions.
+// Logos appear white/monochrome by default and reveal their original
+// colors on hover. Hover pauses only the hovered row.
 //
 // HOW TO REPLACE PLACEHOLDERS WITH REAL LOGOS:
-// 1. Drop logo files (SVG/PNG, transparent bg) into /public or src/assets.
+// 1. Drop colored logo files (SVG/PNG, transparent bg) into /public/logos.
+//    // Upload colored original logos here; CSS will make them white by default and reveal color on hover
 // 2. In the `logoItems` array below:
-//    - Update `name`     → // Update client/company name here
-//    - Update `image`    → // Update logo image path here (e.g. "/logos/acme.svg")
-//    - Update `alt`      → // Update alt text for accessibility
-//    - Optional `kind`   → "circle" | "block" | "diamond" | "ring" (mark shape)
-//    - Optional `mono`   → monogram override (defaults to first letters of name)
-// 3. Add or remove items in this array as needed.
-//    // Add or remove logo items in this array
-// 4. Two rows are rendered automatically; the array is duplicated inside each
-//    row only to create a seamless marquee loop.
-//    // Duplicate logo arrays are used only to create a seamless marquee loop
+//    - Update `image` → // Update logo image path here (e.g. "/logos/acme.svg")
+//    - Update `name`  → // Update client/company name here (used for alt + internal only)
+//    - Update `alt`   → accessible alt text
+// 3. // Add or remove logo items in this array
+// 4. // Duplicate logo arrays are used only to create a seamless marquee loop
+// 5. // Hover pauses only the current marquee row, not both rows
+// 6. // Keep logo containers borderless for a cleaner client-logo wall look
 // =============================================================
-
-type MarkKind = "circle" | "block" | "diamond" | "ring";
 
 type LogoItem = {
   name: string;
-  image?: string; // when undefined, an abstract mark + label renders
+  image: string;
   alt: string;
-  kind?: MarkKind;
-  mono?: string;
 };
 
-// Replace these placeholders with actual client/company logos.
-// Update logo image path here when real assets are ready.
+// Inline SVG placeholders so the visual reads as a logo mark, not a text label.
+// Replace these with real colored logo files when ready.
+const ph = (mono: string, color: string, shape: "circle" | "square" | "diamond" | "ring" = "circle") => {
+  const shapeEl =
+    shape === "square"
+      ? `<rect x="20" y="20" width="160" height="160" rx="24" fill="${color}"/>`
+      : shape === "diamond"
+        ? `<rect x="40" y="40" width="120" height="120" rx="12" transform="rotate(45 100 100)" fill="${color}"/>`
+        : shape === "ring"
+          ? `<circle cx="100" cy="100" r="78" fill="none" stroke="${color}" stroke-width="14"/>`
+          : `<circle cx="100" cy="100" r="80" fill="${color}"/>`;
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>${shapeEl}<text x='100' y='118' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-weight='900' font-size='64' fill='white'>${mono}</text></svg>`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+};
+
 const logoItems: LogoItem[] = [
-  // Row 1 — brands & clients
-  { name: "Aurora D2C",    alt: "Aurora D2C logo placeholder",    kind: "circle",  mono: "AD" },
-  { name: "Northwind Co.", alt: "Northwind Co. logo placeholder", kind: "block",   mono: "NW" },
-  { name: "Lumen Beauty",  alt: "Lumen Beauty logo placeholder",  kind: "ring",    mono: "LB" },
-  { name: "Halcyon Labs",  alt: "Halcyon Labs logo placeholder",  kind: "diamond", mono: "HL" },
-  { name: "Verdant Goods", alt: "Verdant Goods logo placeholder", kind: "circle",  mono: "VG" },
-  // Row 2 — agencies & project types
-  { name: "Atlas Agency",  alt: "Atlas Agency logo placeholder",      kind: "block",   mono: "AA" },
-  { name: "Pixel & Pulse", alt: "Pixel & Pulse studio placeholder",   kind: "ring",    mono: "PP" },
-  { name: "Studio Kavya",  alt: "Studio Kavya logo placeholder",      kind: "diamond", mono: "SK" },
-  { name: "Meridian Ads",  alt: "Meridian Ads logo placeholder",      kind: "circle",  mono: "MA" },
-  { name: "Foundry Group", alt: "Foundry Group logo placeholder",     kind: "block",   mono: "FG" },
+  // Replace this placeholder with the actual client/company logo
+  { name: "Aurora D2C",    image: ph("AD", "#e85d3a", "circle"),  alt: "Aurora D2C logo" },
+  { name: "Northwind Co.", image: ph("NW", "#3b82f6", "square"),  alt: "Northwind Co. logo" },
+  { name: "Lumen Beauty",  image: ph("LB", "#c9a84c", "ring"),    alt: "Lumen Beauty logo" },
+  { name: "Halcyon Labs",  image: ph("HL", "#7c3aed", "diamond"), alt: "Halcyon Labs logo" },
+  { name: "Verdant Goods", image: ph("VG", "#10b981", "circle"),  alt: "Verdant Goods logo" },
+  { name: "Atlas Agency",  image: ph("AA", "#0ea5e9", "square"),  alt: "Atlas Agency logo" },
+  { name: "Pixel & Pulse", image: ph("PP", "#ef4444", "ring"),    alt: "Pixel & Pulse logo" },
+  { name: "Studio Kavya",  image: ph("SK", "#f59e0b", "diamond"), alt: "Studio Kavya logo" },
+  { name: "Meridian Ads",  image: ph("MA", "#6366f1", "circle"),  alt: "Meridian Ads logo" },
+  { name: "Foundry Group", image: ph("FG", "#14b8a6", "square"),  alt: "Foundry Group logo" },
 ];
 
 const rowOne = logoItems.slice(0, 5);
 const rowTwo = logoItems.slice(5);
 
-// Abstract mark — renders a small geometric shape next to the label so each
-// placeholder card looks like a logo lockup rather than plain text.
-function LogoMark({ kind = "circle", mono }: { kind?: MarkKind; mono: string }) {
-  const base =
-    "grid h-8 w-8 shrink-0 place-items-center text-[10px] font-black uppercase tracking-tight text-foreground/80 transition-colors duration-300 group-hover/logo:text-foreground";
-  if (kind === "block") {
-    return (
-      <span className={`${base} rounded-md bg-gradient-to-br from-primary/30 to-primary/5 ring-1 ring-inset ring-foreground/10`}>
-        {mono}
-      </span>
-    );
-  }
-  if (kind === "diamond") {
-    return (
-      <span className={`${base} relative`}>
-        <span aria-hidden className="absolute inset-0 rotate-45 rounded-sm bg-gradient-to-br from-accent/30 to-primary/10 ring-1 ring-inset ring-foreground/10" />
-        <span className="relative">{mono}</span>
-      </span>
-    );
-  }
-  if (kind === "ring") {
-    return (
-      <span className={`${base} rounded-full ring-2 ring-inset ring-foreground/20`}>
-        {mono}
-      </span>
-    );
-  }
-  return (
-    <span className={`${base} rounded-full bg-gradient-to-br from-primary/30 to-accent/15 ring-1 ring-inset ring-foreground/10`}>
-      {mono}
-    </span>
-  );
-}
-
 function LogoCard({ item }: { item: LogoItem }) {
-  const mono = item.mono ?? item.name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
   return (
     <div
-      className="group/logo flex h-16 w-[160px] shrink-0 items-center gap-3 rounded-2xl border border-border bg-card/60 px-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:bg-card hover:shadow-[0_10px_30px_-15px_color-mix(in_oklch,var(--burnt)_60%,transparent)] sm:h-20 sm:w-[210px] sm:px-5 md:w-[230px]"
+      className="group/logo flex h-20 w-[180px] shrink-0 items-center justify-center px-4 sm:h-24 sm:w-[220px] sm:px-6 md:h-28 md:w-[260px] md:px-8"
       aria-label={item.alt}
     >
-      {item.image ? (
-        // Replace this placeholder with actual client/company logo
-        <img
-          src={item.image}
-          alt={item.alt}
-          loading="lazy"
-          className="max-h-10 w-auto opacity-70 grayscale transition-all duration-300 group-hover/logo:opacity-100 group-hover/logo:grayscale-0"
-        />
-      ) : (
-        <>
-          <LogoMark kind={item.kind} mono={mono} />
-          <span className="min-w-0 flex-1">
-            <span className="block truncate text-[11px] font-bold uppercase tracking-[0.16em] text-foreground/80 transition-colors duration-300 group-hover/logo:text-foreground">
-              {item.name}
-            </span>
-            <span className="mt-0.5 block text-[9px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-              Placeholder
-            </span>
-          </span>
-        </>
-      )}
+      {/* Replace this placeholder with the actual client/company logo */}
+      <img
+        src={item.image}
+        alt={item.alt}
+        loading="lazy"
+        className="max-h-8 w-auto opacity-70 brightness-0 invert transition-all duration-300 ease-out group-hover/logo:max-h-12 group-hover/logo:opacity-100 group-hover/logo:[filter:none] sm:max-h-10 sm:group-hover/logo:max-h-[52px] md:max-h-12 md:group-hover/logo:max-h-16"
+      />
     </div>
   );
 }
@@ -126,9 +84,10 @@ function MarqueeRow({
   // Duplicate logo arrays are used only to create a seamless marquee loop
   const looped = [...items, ...items];
   return (
-    <div className="group/row flex overflow-hidden">
+    // Hover pauses only the current marquee row, not both rows
+    <div className="marquee-row group/row flex overflow-hidden">
       <div
-        className="flex shrink-0 gap-4 pr-4 motion-reduce:!animate-none sm:gap-5 sm:pr-5"
+        className="marquee-track flex shrink-0 gap-6 pr-6 transition-[animation-play-state] motion-reduce:!animate-none sm:gap-10 sm:pr-10 md:gap-14 md:pr-14 group-hover/row:[animation-play-state:paused]"
         style={{
           animation: `marquee ${duration}s linear infinite`,
           animationDirection: reverse ? "reverse" : "normal",
@@ -145,26 +104,24 @@ function MarqueeRow({
 export function LogoMarquee() {
   return (
     <div className="relative">
-      {/* Edge fade masks — stronger left/right gradients so logos enter/exit smoothly */}
+      {/* Edge fade masks blending with the surrounding dark card */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-card via-card/80 to-transparent sm:w-32 md:w-40"
+        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-card via-card/85 to-transparent sm:w-40 md:w-56"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-card via-card/80 to-transparent sm:w-32 md:w-40"
+        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-card via-card/85 to-transparent sm:w-40 md:w-56"
       />
 
-      {/* Animated marquee — pauses on hover; hidden when user prefers reduced motion */}
-      <div className="space-y-4 motion-reduce:hidden [&_.group\\/row:hover_[style*='animation']]:[animation-play-state:paused]">
-        {/* Row 1 → moves left */}
+      {/* Animated marquee — per-row hover pause; hidden when reduced motion */}
+      <div className="space-y-2 motion-reduce:hidden sm:space-y-4">
         <MarqueeRow items={rowOne} duration={55} />
-        {/* Row 2 → moves right (reverse) */}
         <MarqueeRow items={rowTwo} reverse duration={65} />
       </div>
 
       {/* Reduced-motion fallback: clean static grid */}
-      <div className="hidden grid-cols-2 gap-3 motion-reduce:grid sm:grid-cols-3 md:grid-cols-5">
+      <div className="hidden grid-cols-2 place-items-center gap-6 motion-reduce:grid sm:grid-cols-3 md:grid-cols-5">
         {logoItems.map((it) => (
           <LogoCard key={it.name} item={it} />
         ))}
