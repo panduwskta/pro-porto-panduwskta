@@ -203,13 +203,7 @@ const TESTIMONIALS = [
   },
 ];
 
-// Compact "best fit" tags — keep short, used in the slim availability strip.
-const BEST_FIT_TAGS = [
-  "D2C brands",
-  "Meta Ads teams",
-  "Creative testing workflows",
-  "Growth & performance roles",
-];
+
 
 function Index() {
   return (
